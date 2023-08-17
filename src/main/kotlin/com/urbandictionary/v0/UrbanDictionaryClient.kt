@@ -1,6 +1,7 @@
-package com.urbandictionary.v1
+package com.urbandictionary.v0
 
 import com.urbandictionary.CoreClient
 
-class UrbanDictionaryClient: CoreClient("") {
+object UrbanDictionaryClient: CoreClient("https://api.urbandictionary.com/") {
+    val api: UrbanInterface = retroClient.create(UrbanInterface::class.java)
 }
